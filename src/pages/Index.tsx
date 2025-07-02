@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import SearchBar from "@/components/SearchBar";
+import ThemeSelector from "@/components/ThemeSelector";
 
 const Index = () => {
   return (
@@ -44,6 +45,8 @@ const Index = () => {
           </div>
         </div>
       </div>
+      
+      <ThemeSelector />
     </div>
   );
 };

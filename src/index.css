@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Professional User Guides Design System - All colors MUST be HSL */
+/* Design System - Multiple Theme Options */
 
 @layer base {
+  /* Theme 1: Modern Blue (Default) */
   :root {
-    /* Professional color palette */
     --background: 0 0% 100%;
     --foreground: 215 25% 27%;
     
-    /* Brand colors */
     --brand-primary: 213 94% 68%;
     --brand-primary-hover: 213 94% 58%;
     --brand-secondary: 210 17% 98%;
@@ -18,32 +17,107 @@
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
     --primary: 213 94% 68%;
     --primary-foreground: 0 0% 100%;
-
     --secondary: 210 17% 98%;
     --secondary-foreground: 215 25% 27%;
-
     --muted: 210 17% 95%;
     --muted-foreground: 215 15% 55%;
-
     --accent: 213 27% 84%;
     --accent-foreground: 215 25% 27%;
     
-    /* Professional gradients */
     --gradient-primary: linear-gradient(135deg, hsl(213 94% 68%), hsl(213 94% 58%));
     --gradient-hero: linear-gradient(135deg, hsl(210 17% 98%), hsl(213 27% 84%));
-    
-    /* Professional shadows */
     --shadow-elegant: 0 4px 20px -4px hsl(213 94% 68% / 0.15);
     --shadow-card: 0 2px 8px -2px hsl(215 25% 27% / 0.1);
-    
-    /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Theme 2: Elegant Purple - Add class "theme-purple" to body */
+  .theme-purple {
+    --background: 0 0% 100%;
+    --foreground: 260 15% 25%;
+    
+    --brand-primary: 262 83% 58%;
+    --brand-primary-hover: 262 83% 48%;
+    --brand-secondary: 260 20% 98%;
+    --brand-accent: 262 32% 82%;
+
+    --primary: 262 83% 58%;
+    --secondary: 260 20% 98%;
+    --muted: 260 20% 95%;
+    --muted-foreground: 260 10% 55%;
+    --accent: 262 32% 82%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 83% 48%));
+    --gradient-hero: linear-gradient(135deg, hsl(260 20% 98%), hsl(262 32% 82%));
+    --shadow-elegant: 0 4px 20px -4px hsl(262 83% 58% / 0.2);
+  }
+
+  /* Theme 3: Professional Teal - Add class "theme-teal" to body */
+  .theme-teal {
+    --background: 0 0% 100%;
+    --foreground: 180 15% 25%;
+    
+    --brand-primary: 174 72% 56%;
+    --brand-primary-hover: 174 72% 46%;
+    --brand-secondary: 180 20% 98%;
+    --brand-accent: 174 32% 82%;
+
+    --primary: 174 72% 56%;
+    --secondary: 180 20% 98%;
+    --muted: 180 20% 95%;
+    --muted-foreground: 180 10% 55%;
+    --accent: 174 32% 82%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(174 72% 56%), hsl(174 72% 46%));
+    --gradient-hero: linear-gradient(135deg, hsl(180 20% 98%), hsl(174 32% 82%));
+    --shadow-elegant: 0 4px 20px -4px hsl(174 72% 56% / 0.2);
+  }
+
+  /* Theme 4: Warm Orange - Add class "theme-orange" to body */
+  .theme-orange {
+    --background: 0 0% 100%;
+    --foreground: 25 15% 25%;
+    
+    --brand-primary: 24 95% 53%;
+    --brand-primary-hover: 24 95% 43%;
+    --brand-secondary: 25 20% 98%;
+    --brand-accent: 24 32% 82%;
+
+    --primary: 24 95% 53%;
+    --secondary: 25 20% 98%;
+    --muted: 25 20% 95%;
+    --muted-foreground: 25 10% 55%;
+    --accent: 24 32% 82%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(24 95% 53%), hsl(24 95% 43%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 20% 98%), hsl(24 32% 82%));
+    --shadow-elegant: 0 4px 20px -4px hsl(24 95% 53% / 0.2);
+  }
+
+  /* Theme 5: Minimalist Gray - Add class "theme-minimal" to body */
+  .theme-minimal {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+    
+    --brand-primary: 0 0% 20%;
+    --brand-primary-hover: 0 0% 10%;
+    --brand-secondary: 0 0% 98%;
+    --brand-accent: 0 0% 85%;
+
+    --primary: 0 0% 20%;
+    --secondary: 0 0% 98%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 0 0% 85%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 20%), hsl(0 0% 10%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 85%));
+    --shadow-elegant: 0 4px 20px -4px hsl(0 0% 20% / 0.15);
+  }
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
