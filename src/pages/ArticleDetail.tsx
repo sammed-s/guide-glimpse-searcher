@@ -3,8 +3,17 @@ import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Clock, User, FileText } from "lucide-react";
+import { ArrowLeft, Clock, User, FileText, Home, Search } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 interface ArticleDetail {
   id: string;
@@ -125,6 +134,36 @@ const ArticleDetail = () => {
       <Navbar />
       
       <div className="max-w-4xl mx-auto px-4 py-8">
+        {/* Breadcrumbs */}
+        <Breadcrumb className="mb-6">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link to="/" className="flex items-center">
+                  <Home className="w-4 h-4 mr-1" />
+                  Home
+                </Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link to={searchTerm ? `/search/${searchTerm}` : "/"} className="flex items-center">
+                  <Search className="w-4 h-4 mr-1" />
+                  Search Results
+                </Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage className="flex items-center">
+                <FileText className="w-4 h-4 mr-1" />
+                Article
+              </BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
         {/* Back Button */}
         <div className="mb-6">
           <Link to={searchTerm ? `/search/${searchTerm}` : "/"}>
